@@ -10,7 +10,15 @@ body{
   background: #fff;
 }
 
+
+
 .header{
+ display: block; 
+background: linear-gradient(180deg, #EAEDFF 0%, #FFFFFF 84.53%);
+  
+}
+
+.row-one{
   height: 64px;
   width: 100%;
   background: #fff;
@@ -19,7 +27,6 @@ body{
   justify-content: space-between;
   padding: 0 24px;
 }
-
 .header-left{
   display: flex;
   align-items: center;
@@ -91,3 +98,92 @@ body{
   object-fit: contain;
   filter: brightness(0) invert(1);    /*màu ảnh   */
 }
+
+.row-two{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+ margin: 40px 100px 100px;
+  
+}
+.introduce{
+  display: flex;
+  flex-direction: column;       
+  justify-content: space-between; 
+  height: 200px;    
+}
+.intro-purple{
+  color: #4f46e5;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.intro-black{
+  color: black;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.intro-img img{
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.btn-tryForFree{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
+
+  background: #2f47c7;
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Container chứa 4 card */
+.row-three {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 40px 200px 200px;
+}
+
+/* Card */
+.row-three .btn {
+  flex: 1;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+
+  padding: 20px 16px;
+  cursor: default;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Dòng số (12K+, 5K+, 34%, 98%) */
+.row-three .btn span:first-child {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4f5dff;
+}
+
+/* Dòng mô tả */
+.row-three .btn span:last-child {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.4;
+}
+
+
