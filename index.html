@@ -1,71 +1,108 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Landing Page</title>
- <link rel="stylesheet" href="style.css">
- 
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page - Tailwind</title>
+
+  <!-- Tailwind CDN ĐÚNG -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-white font-sans">
+    <div class="max-w-7xl mx-auto px-40 bg-[linear-gradient(180deg,_#EAEDFF_0%,_#FFFFFF_84.53%)]">
 
-  <header class="header">
+  <!-- Header wrapper (giống .header) -->
+  <header class="block">
 
-   <div class = "row-one">
-    <div class="header-left">
-      <img src="img/logo.jpg" alt="logo" class="logo">
-      <span class="brand">AI Meeting Note</span>
-    </div>
-
-    <div class="header-right">
-      <div class="lang">
-        <img src="img/language.png" alt="lang" class="language">
+    <!-- Row 1 (giống .row-one) -->
+    <div class="flex items-center w-[950px] h-[48px] mt-[15px]">
+      <!-- left -->
+      <div class="flex items-center gap-[10px]">
+        <img src="img/imgLogo.png" alt="logo" class="w-7 h-7">
+        <span class="text-[15px] font-bold">AI Meeting Note</span>
       </div>
 
-      <button class="btn-login">
-        <img src="img/user.png" alt="icon">
-        <p>Đăng nhập</p>
-      </button>
-   </div>
-
-    </div>
-   <div class="row-two">
-        <div class="introduce">
-          <p><span class="intro-purple">Trợ lý thông minh của </span>
-          <span class="intro-black">các Cuộc họp</span></p>
-          <p><b>AI Meeting Note </b>- trợ lý cuộc họp thông minh. Từ các buổi thảo luận đến những cuộc họp và thuyết trình chuyên nghiệp, AI Meeting Note đảm bảo mọi nội dung trao đổi đều được ghi lại, phiên âm và tổng hợp thành tài liệu cuộc họp rõ ràng, dễ theo dõi và quản lý dành cho cá nhân và tổ chức.</p>
-          <button class="btn-tryForFree">
-            <p>Dùng thử miễn phí</p>
-          </button>
+      <!-- right -->
+      <div class="flex items-center ml-auto gap-3">
+        <div class="  cursor-pointer">
+          <img src="img/imgLanguage.png" alt="lang" class="w-8 h-8">
         </div>
 
-        <div class="intro-img">
-          <img src="img/introHeader.png">
-        </div>
+        <button class="h-8 min-w-15 px-4 rounded-full border-0
+                       bg-gradient-to-r from-indigo-600 to-indigo-500
+                       shadow-[0_10px_22px_rgba(79,70,229,0.28)]
+                       flex items-center justify-center gap-2 cursor-pointer">
+          <img src="img/imgUser.png" alt="icon"
+               class="w-[18px] h-[18px] object-contain brightness-0 invert">
+          <p class="flex items-center text-white font-semibold text-[15px]">Đăng nhập</p>
+        </button>
+      </div>
     </div>
-    <div class="row-three">
-      <button class="btn">
-        <span class="conten-purple">12K+</span>
-        <span>Cuộc họp diễn ra</span>
+
+    <!-- Row 2 (giống .row-two) -->
+    <div class="flex items-center mt-10 mx-[90px] mb-[85px] ">
+      <!-- introduce -->
+      <div class="flex flex-col justify-between h-[200px] w-[350px]">
+        <p class="text-[38px] font-semibold leading-[50px]">
+          <span class="text-indigo-600">Trợ lý thông minh của </span>
+          <span class="text-black">các Cuộc họp</span>
+        </p>
+
+        <p class="text-[11px] my-[20px]">
+          <b>AI Meeting Note </b>- trợ lý cuộc họp thông minh. Từ các buổi thảo luận đến những cuộc họp và thuyết trình chuyên nghiệp,
+          AI Meeting Note đảm bảo mọi nội dung trao đổi đều được ghi lại, phiên âm và tổng hợp thành tài liệu cuộc họp rõ ràng,
+          dễ theo dõi và quản lý dành cho cá nhân và tổ chức.
+        </p>
+
+        <button class="px-5 py-[8px] rounded-full border-0 bg-[#2f47c7] text-white text-sm font-semi w-fit">
+          <p class="text-[11px]">Dùng thử miễn phí</p>
+        </button>
+      </div>
+
+      <!-- intro image -->
+      <div class="">
+        <img src="img/introHeader.png" alt="intro" class="w-[300px] h-[300px] object-contain ml-[110px]">
+      </div>
+    </div>
+
+    <!-- Row 3 cards (giống .row-three) -->
+    <div class="flex justify-between gap-6 mt-7 mx-[90px] mb-[150px]">
+      <!-- card 1 -->
+      <button class="flex-1 bg-white border-0 rounded-xl px-4 py-5 cursor-default
+                     flex flex-col items-center gap-2
+                     shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
+        <span class="text-[20px] font-semibold text-[#4f5dff]">12K+</span>
+        <span class="text-sm text-gray-500 text-center leading-[1.4]">Cuộc họp diễn ra</span>
       </button>
 
-      <button class="btn">
-        <span class="conten-purple">5K+</span>
-        <span>Tổ chức sử dụng</span>
+      <!-- card 2 -->
+      <button class="flex-1 bg-white border-0 rounded-xl px-4 py-5 cursor-default
+                     flex flex-col items-center gap-2
+                     shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
+        <span class="text-[20px] font-semibold text-[#4f5dff]">5K+</span>
+        <span class="text-sm text-gray-500 text-center leading-[1.4]">Tổ chức sử dụng</span>
       </button>
 
-      <button class="btn">
-        <span>34%</span>
-        <span>Thời gian tổng hợp biên bản được tiết kiệm</span>
+      <!-- card 3 -->
+      <button class="flex-1 bg-white border-0 rounded-xl px-4 py-5 cursor-default
+                     flex flex-col items-center gap-2
+                     shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
+        <span class="text-[20px] font-semibold text-[#4f5dff]">34%</span>
+        <span class="text-sm text-gray-500 text-center leading-[1.4]">Thời gian tổng hợp biên bản được tiết kiệm</span>
       </button>
 
-      <button class="btn">
-        <span>98%</span>
-        <span>Người dùng hài lòng</span>
+      <!-- card 4 -->
+      <button class="flex-1 bg-white border-0 rounded-xl px-4 py-5 cursor-default
+                     flex flex-col items-center gap-2
+                     shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
+        <span class="text-[20px] font-semibold text-[#4f5dff]">98%</span>
+        <span class="text-sm text-gray-500 text-center leading-[1.4]">Người dùng hài lòng</span>
       </button>
     </div>
+
 
   </header>
-
+</div>
+</body>
 </body>
 </html>
