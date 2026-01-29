@@ -1,108 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head >
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Landing Page - Tailwind</title>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- Tailwind CDN ĐÚNG -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
 </head>
-<body class="bg-white font-sans">
-    <div class="max-w-7xl mx-auto px-40 bg-[linear-gradient(180deg,_#EAEDFF_0%,_#FFFFFF_84.53%)]">
+<body class="font-sans">
+  <header class="block bg-[linear-gradient(180deg,_#EAEDFF_0%,_#FFFFFF_84.53%)]" >
+  <div class="max-w-7xl mx-auto">
 
   <!-- Header wrapper (giống .header) -->
-  <header class="block">
+  
 
     <!-- Row 1 (giống .row-one) -->
-    <div class="flex items-center w-[950px] h-[48px] mt-[15px]">
+    <div class="flex items-center w-full h-[48px] mt-[26px]">
       <!-- left -->
       <div class="flex items-center gap-[10px]">
-        <img src="img/imgLogo.png" alt="logo" class="w-7 h-7">
-        <span class="text-[15px] font-bold">AI Meeting Note</span>
+        <img src="img/imgLogo.png" alt="logo" class="w-8 h-8">
+        <span class="text-[18px] font-bold">AI Meeting Note</span>
       </div>
 
       <!-- right -->
       <div class="flex items-center ml-auto gap-3">
         <div class="  cursor-pointer">
-          <img src="img/imgLanguage.png" alt="lang" class="w-8 h-8">
+          <img src="img/imgLanguage.png" alt="lang" class="w-12 h-12">
         </div>
 
-        <button class="h-8 min-w-15 px-4 rounded-full border-0
-                       bg-gradient-to-r from-indigo-600 to-indigo-500
-                       shadow-[0_10px_22px_rgba(79,70,229,0.28)]
+        <button class="w-[164px] h-[48px] rounded-[40px] px-4 border-0                
+                       bg-[linear-gradient(180deg,_#7074CC_0%,_#203596_100%)]
                        flex items-center justify-center gap-2 cursor-pointer">
           <img src="img/imgUser.png" alt="icon"
                class="w-[18px] h-[18px] object-contain brightness-0 invert">
-          <p class="flex items-center text-white font-semibold text-[15px]">Đăng nhập</p>
+          <p class="flex items-center text-white font-semibold text-[18px]">Đăng nhập</p>
         </button>
       </div>
     </div>
 
     <!-- Row 2 (giống .row-two) -->
-    <div class="flex items-center mt-10 mx-[90px] mb-[85px] ">
+    <div class="relative flex items-center mt-32 mx-[100px] mb-[85px] gap-6  ">
       <!-- introduce -->
-      <div class="flex flex-col justify-between h-[200px] w-[350px]">
-        <p class="text-[38px] font-semibold leading-[50px]">
+      <div class=" flex flex-col justify-between h-[362px] w-[540px]">
+        <p class="font-['Inter'] font-semibold text-[56px] leading-[130%] tracking-normal align-middle">
           <span class="text-indigo-600">Trợ lý thông minh của </span>
           <span class="text-black">các Cuộc họp</span>
         </p>
 
-        <p class="text-[11px] my-[20px]">
-          <b>AI Meeting Note </b>- trợ lý cuộc họp thông minh. Từ các buổi thảo luận đến những cuộc họp và thuyết trình chuyên nghiệp,
+        <p class="font-sans text-[16px] leading-[150%] tracking-normal text-justify">
+          <span class="font-semibold">AI Meeting Note </span>- trợ lý cuộc họp thông minh. Từ các buổi thảo luận đến những cuộc họp và thuyết trình chuyên nghiệp,
           AI Meeting Note đảm bảo mọi nội dung trao đổi đều được ghi lại, phiên âm và tổng hợp thành tài liệu cuộc họp rõ ràng,
           dễ theo dõi và quản lý dành cho cá nhân và tổ chức.
         </p>
 
-        <button class="px-5 py-[8px] rounded-full border-0 bg-[#2f47c7] text-white text-sm font-semi w-fit">
-          <p class="text-[11px]">Dùng thử miễn phí</p>
+        <button class="flex items-center gap-2 w-[222px] h-[48px] rounded-[40px] px-5 py-[8px] bg-[#203596] text-white  font-semi">
+          <p class="text-[16px]">Dùng thử miễn phí</p>
+          <img src="img/arrow-right.png"  class="w-6 h-6">
         </button>
       </div>
 
       <!-- intro image -->
       <div class="">
-        <img src="img/introHeader.png" alt="intro" class="w-[300px] h-[300px] object-contain ml-[110px]">
+        <img src="img/introHeader.png" alt="intro" class="absolute right-0 top-1/2 -translate-y-1/2 w-[476px] h-[415.31px] object-contain ">
       </div>
     </div>
 
     <!-- Row 3 cards (giống .row-three) -->
     <div class="flex justify-between gap-6 mt-7 mx-[90px] mb-[150px]">
       <!-- card 1 -->
-      <button class="flex-1 bg-white border-0 rounded-xl px-4 py-5 cursor-default
-                     flex flex-col items-center gap-2
-                     shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
-        <span class="text-[20px] font-semibold text-[#4f5dff]">12K+</span>
-        <span class="text-sm text-gray-500 text-center leading-[1.4]">Cuộc họp diễn ra</span>
+      <button class="flex flex-col items-center justify-center w-[268px] h-[146px] rounded-[12px] bg-white shadow-[4px_4px_8px_0px_#121D531F] hover:translate-y-[-2px] transition-transform">
+        <span class="font-sans font-semibold text-[20px] leading-[120%] text-[#4D5DAB]">12K</span>
+        <span class="font-sans text-[16px] text-gray-500 text-center leading-[140%] mt-2 px-6">Cuộc họp diễn ra</span>
       </button>
 
       <!-- card 2 -->
-      <button class="flex-1 bg-white border-0 rounded-xl px-4 py-5 cursor-default
-                     flex flex-col items-center gap-2
-                     shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
-        <span class="text-[20px] font-semibold text-[#4f5dff]">5K+</span>
-        <span class="text-sm text-gray-500 text-center leading-[1.4]">Tổ chức sử dụng</span>
+      <button class="flex flex-col items-center justify-center w-[268px] h-[146px] rounded-[12px] bg-white shadow-[4px_4px_8px_0px_#121D531F] hover:translate-y-[-2px] transition-transform">
+        <span class="font-sans font-semibold text-[20px] leading-[120%] text-[#4D5DAB]">5K</span>
+        <span class="font-sans text-[16px] text-gray-500 text-center leading-[140%] mt-2 px-6">Tổ chức sử dụng</span>
       </button>
 
       <!-- card 3 -->
-      <button class="flex-1 bg-white border-0 rounded-xl px-4 py-5 cursor-default
-                     flex flex-col items-center gap-2
-                     shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
-        <span class="text-[20px] font-semibold text-[#4f5dff]">34%</span>
-        <span class="text-sm text-gray-500 text-center leading-[1.4]">Thời gian tổng hợp biên bản được tiết kiệm</span>
+      <button class="flex flex-col items-center justify-center w-[268px] h-[146px] rounded-[12px] bg-white shadow-[4px_4px_8px_0px_#121D531F] hover:translate-y-[-2px] transition-transform">
+        <span class="font-sans font-semibold text-[20px] leading-[120%] text-[#4D5DAB]">34%</span>
+        <span class="font-sans text-[16px] text-gray-500 text-center leading-[140%] mt-2 px-6">Thời gian tổng hợp biên bản được tiết kiệm</span>
       </button>
 
       <!-- card 4 -->
-      <button class="flex-1 bg-white border-0 rounded-xl px-4 py-5 cursor-default
-                     flex flex-col items-center gap-2
-                     shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
-        <span class="text-[20px] font-semibold text-[#4f5dff]">98%</span>
-        <span class="text-sm text-gray-500 text-center leading-[1.4]">Người dùng hài lòng</span>
+      <button class="flex flex-col items-center justify-center w-[268px] h-[146px] rounded-[12px] bg-white shadow-[4px_4px_8px_0px_#121D531F] hover:translate-y-[-2px] transition-transform">
+        <span class="font-sans font-semibold text-[20px] leading-[120%] text-[#4D5DAB]">98%</span>
+        <span class="font-sans text-[16px] text-gray-500 text-center leading-[140%] mt-2 px-6">Người dùng hài lòng</span>
       </button>
-    </div>
 
 
   </header>
+
+  <main>
+
+<section class="relative mb-[250px] h-[1000px] w-full">
+  <div class="max-w-7xl mx-auto">
+    <p class="h-[150px] w-[860px] text-center bg-white absolute top-36 left-1/2 -translate-x-1/2">
+        <span class="font-sans font-semibold text-[#203596] text-[56px] leading-[140%] tracking-normal text-center align-middle mr-3">Ghi âm và tóm tắt</span>
+        <span class="font-sans font-semibold text-[56px] leading-[140%] tracking-normal text-center align-middle"> các Cuộc họp</span><br>
+        <span class="font-sans font-normal text-[#666B6E] text-[16px] leading-[150%] tracking-normal text-center">Từ ghi âm đến tóm tắt thông minh, AI tự động tổng hợp, tóm tắt những nội dung để bạn không bỏ lỡ bất kỳ thông tin quan trọng nào.</span>
+    </p>
+    <img src="img/ghiAmVaTomTat.png" class="absolute w-[1176px] h-[546px] top-[320px] flex gap-[24px] rotate-0">
+  </div>
+</section>
+
+<section class="bg-blue-500">
+  <div class="max-w-7xl mx-auto">
+    
+  </div>
+</section>
+  </main>
 </div>
+
+
 </body>
 </body>
 </html>
